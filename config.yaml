@@ -1,32 +1,74 @@
-environment:
+# environment:
+#   development:
+#     frontend_url: "http://localhost:3000"
+#     backend_url: "http://localhost:5000"
+#     database:
+#       host: "localhost"
+#       name: "accounts_dev"
+#       table: "accts_dev"
+
+#   quality_assurance:
+#     frontend_url: "https://qa.fe.env-aware-proj.com"
+#     backend_url: "https://qa.api.env-aware-proj.com"
+#     database:
+#       host: "qa-db.env-aware-proj.com"
+#       name: "accounts_qa"
+#       table: "accts_qa"
+
+#   pilot:
+#     frontend_url: "https://pilot.fe.env-aware-proj.com"
+#     backend_url: "https://pilot.api.env-aware-proj.com"
+#     database:
+#       host: "pilot-db.env-aware-proj.com"
+#       name: "accounts_pilot"
+#       table: "accts_pilot"
+
+#   prod:
+#     frontend_url: "https://fe.env-aware-proj.com"
+#     backend_url: "https://api.env-aware-proj.com"
+#     database:
+#       host: "prod-db.env-aware-proj.com"
+#       name: "accounts"
+#       table: "accts"
+
+environments:
   development:
-    frontend_url: "http://localhost:3000"
-    backend_url: "http://localhost:5000"
-    database:
-      host: "localhost"
-      name: "accounts_dev"
-      table: "accts_dev"
+    db:
+      connectionString: "Host=localhost;Port=5432;Database=accounts_dev;Username=devuser;Password=devpass"
+    api:
+      baseUrl: "http://localhost:5000/api"
+    frontend:
+      baseUrl: "http://localhost:3000"
+    tables:
+      accounts: "accts_dev"
 
   quality_assurance:
-    frontend_url: "https://qa.fe.env-aware-proj.com"
-    backend_url: "https://qa.api.env-aware-proj.com"
-    database:
-      host: "qa-db.env-aware-proj.com"
-      name: "accounts_qa"
-      table: "accts_qa"
+    db:
+      connectionString: "Host=qa-db.env-aware-proj.com;Port=5432;Database=accounts_qa;Username=qauser;Password=qapass"
+    api:
+      baseUrl: "https://qa.api.env-aware-proj.com/api"
+    frontend:
+      baseUrl: "https://qa.fe.env-aware-proj.com"
+    tables:
+      accounts: "accts_qa"
 
   pilot:
-    frontend_url: "https://pilot.fe.env-aware-proj.com"
-    backend_url: "https://pilot.api.env-aware-proj.com"
-    database:
-      host: "pilot-db.env-aware-proj.com"
-      name: "accounts_pilot"
-      table: "accts_pilot"
+    db:
+      connectionString: "Host=pilot-db.env-aware-proj.com;Port=5432;Database=accounts_pilot;Username=pilotuser;Password=pilotpass"
+    api:
+      baseUrl: "https://pilot.api.env-aware-proj.com/api"
+    frontend:
+      baseUrl: "https://pilot.fe.env-aware-proj.com"
+    tables:
+      accounts: "accts_pilot"
 
   prod:
-    frontend_url: "https://fe.env-aware-proj.com"
-    backend_url: "https://api.env-aware-proj.com"
-    database:
-      host: "prod-db.env-aware-proj.com"
-      name: "accounts"
-      table: "accts"
+    db:
+      connectionString: "Host=prod-db.env-aware-proj.com;Port=5432;Database=accounts;Username=produser;Password=prodpass"
+    api:
+      baseUrl: "https://api.env-aware-proj.com/api"
+    frontend:
+      baseUrl: "https://fe.env-aware-proj.com"
+    tables:
+      accounts: "accts"
+# Note: Ensure to replace placeholder values with actual credentials and URLs before deploying to production.
