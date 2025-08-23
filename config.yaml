@@ -1,0 +1,32 @@
+environment:
+  development:
+    frontend_url: "http://localhost:3000"
+    backend_url: "http://localhost:5000"
+    database:
+      host: "localhost"
+      name: "accounts_dev"
+      table: "accts_dev"
+
+  quality_assurance:
+    frontend_url: "https://qa.fe.env-aware-proj.com"
+    backend_url: "https://qa.api.env-aware-proj.com"
+    database:
+      host: "qa-db.env-aware-proj.com"
+      name: "accounts_qa"
+      table: "accts_qa"
+
+  pilot:
+    frontend_url: "https://pilot.fe.env-aware-proj.com"
+    backend_url: "https://pilot.api.env-aware-proj.com"
+    database:
+      host: "pilot-db.env-aware-proj.com"
+      name: "accounts_pilot"
+      table: "accts_pilot"
+
+  prod:
+    frontend_url: "https://fe.env-aware-proj.com"
+    backend_url: "https://api.env-aware-proj.com"
+    database:
+      host: "prod-db.env-aware-proj.com"
+      name: "accounts"
+      table: "accts"
