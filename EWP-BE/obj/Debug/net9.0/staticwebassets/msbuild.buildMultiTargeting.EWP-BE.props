@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/EWP-BE.props" />
+</Project>
